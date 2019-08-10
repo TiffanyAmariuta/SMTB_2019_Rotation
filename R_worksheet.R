@@ -3,7 +3,7 @@
 
 #directory management 
 getwd()
-setwd("~/SMTB_2019/")
+setwd("~/SMTB_2019_Rotation/")
 getwd()
 
 #explore the standard normal distribution 
@@ -20,7 +20,7 @@ N <- 100
 mymat <- matrix(rnorm(n = N, mean = 0, sd = 1), nrow = sqrt(N))
 write.table(mymat, "~/exercise_table.txt", row.names = F, col.names = F, quote = F)
 
-system("mv ~/exercise_table.txt ~/SMTB_2019/")
+system("mv ~/exercise_table.txt ~/SMTB_2019_Rotation/")
 mymat2 <- read.table("exercise_table.txt", header = F, stringsAsFactors = F, sep = " ")
 head(mymat2)
 dim(mymat2)

@@ -37,14 +37,6 @@ for (i in 1:nrow(mymat2)){
 }
 all(s == rowSums(mymat2)) 
 
-#exercise with real scRNAseq data 
-rna <- readRDS("data/scRNAseq/celseq_synovium_log2_5265cells_paper.rds") #log2tpm gene expression 
-dim(rna) #genes by cells 
-hist(rna[,1]) #distrib over cells
-hist(rna[1,]) #distib over gene
-length(which(rna == 0)) / (nrow(rna)*ncol(rna)) #% sparsity / drop-out
-hist(rowSums(t(rna))) #distrib of gene expression / cell 
-
 
 
 
